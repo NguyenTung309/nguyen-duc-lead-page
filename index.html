@@ -1,0 +1,2935 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Khóa Học Làm Video Triệu View Bằng AI | Nguyễn Đức - ducai.vn</title>
+  <meta name="description" content="Tự tay sản xuất hàng trăm video triệu view bằng công nghệ AI chỉ trong 15 phút. Khóa học thực chiến cầm tay chỉ việc cùng chuyên gia Nguyễn Đức.">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. CORE DESIGN SYSTEM & VARIABLES (MODERN CREATOR & HIGH-TRUST THEME)
+       ========================================================================== */
+    :root {
+      --bg-dark: #090d16;
+      --bg-surface: #0f172a;
+      --bg-card: rgba(18, 26, 44, 0.7);
+      --bg-card-hover: rgba(26, 38, 64, 0.85);
+      
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(16, 185, 129, 0.4);
+      --border-light: rgba(255, 255, 255, 0.15);
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --primary: #10b981;        /* Emerald / Growth */
+      --primary-hover: #059669;
+      --primary-gradient: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+      --secondary: #06b6d4;      /* Cyan / Modern Tech */
+      --amber: #f59e0b;          /* Warm Gold / Urgency & Gift */
+      --amber-light: #fef3c7;
+      --accent-glow: rgba(16, 185, 129, 0.25);
+
+      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      
+      --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      --shadow-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 25px rgba(16, 185, 129, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+      background: var(--bg-dark);
+      color: var(--text-main);
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Subtle ambient aura (ấm áp, không chói) */
+    .ambient-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .ambient-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(140px);
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    .glow-top-left {
+      width: 600px;
+      height: 600px;
+      background: #10b981;
+      top: -150px;
+      left: 10%;
+    }
+
+    .glow-middle-right {
+      width: 500px;
+      height: 500px;
+      background: #06b6d4;
+      top: 40%;
+      right: -100px;
+    }
+
+    .glow-bottom-left {
+      width: 550px;
+      height: 550px;
+      background: #f59e0b;
+      bottom: 10%;
+      left: -100px;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Scroll progress bar */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--primary-gradient);
+      z-index: 9999;
+      transition: width 0.1s ease;
+    }
+
+    /* ==========================================================================
+       2. HEADER / NAVIGATION (CLEAN & TRUSTWORTHY)
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 16px 0;
+      background: rgba(9, 13, 22, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .site-header.scrolled {
+      padding: 12px 0;
+      background: rgba(9, 13, 22, 0.95);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--primary-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+    }
+
+    .brand-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-badge {
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--primary);
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      margin-left: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .nav-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: var(--primary-gradient);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 999px;
+      box-shadow: 0 4px 18px rgba(16, 185, 129, 0.35);
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .nav-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.5);
+    }
+
+    /* ==========================================================================
+       3. HERO SECTION (FRIENDLY & HIGH CONVERSION)
+       ========================================================================== */
+    .hero-section {
+      padding: 70px 0 60px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 620px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--primary);
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 22px;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 10px var(--primary);
+      animation: pulseAnim 2s infinite;
+    }
+
+    @keyframes pulseAnim {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+
+    .hero-title {
+      font-size: clamp(34px, 4.2vw, 52px);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .hero-title .highlight {
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero-sub {
+      font-size: clamp(16px, 1.2vw, 18px);
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    .hero-sub strong {
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+
+    /* Giá & Ưu Đãi Box */
+    .hero-offer-badge {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 12px 18px;
+      margin-bottom: 28px;
+      width: fit-content;
+    }
+
+    .price-old {
+      font-size: 14px;
+      color: var(--text-dim);
+      text-decoration: line-through;
+    }
+
+    .price-free {
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--primary);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .offer-remain {
+      font-size: 13px;
+      color: var(--amber);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Call To Action Buttons */
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .btn-main-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 34px;
+      background: var(--primary-gradient);
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 800;
+      border-radius: 999px;
+      box-shadow: 0 10px 28px rgba(16, 185, 129, 0.4);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-main-cta:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 16px 36px rgba(16, 185, 129, 0.55);
+    }
+
+    .btn-secondary-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px 18px;
+      border-radius: 999px;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary-link:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Trust highlights */
+    .hero-trust-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      list-style: none;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+
+    .hero-trust-list li {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .hero-trust-list svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--primary);
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       HERO RIGHT: REALISTIC CREATOR SMARTPHONE SHOWCASE (THẬT & HẤP DẪN)
+       ========================================================================== */
+    .phone-showcase-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone-mockup {
+      width: 320px;
+      height: 600px;
+      background: #0a0f1d;
+      border-radius: 46px;
+      border: 4px solid #2a3754;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(16, 185, 129, 0.15);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Phone Speaker / Dynamic Island */
+    .phone-island {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 22px;
+      background: #000;
+      border-radius: 12px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 10px;
+    }
+
+    .island-lens {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #111e38;
+    }
+
+    /* Video Player Mockup Inside Phone */
+    .phone-video-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      border-radius: 42px;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+
+    .phone-video-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(9, 13, 22, 0.45) 0%, rgba(9, 13, 22, 0.05) 25%, rgba(9, 13, 22, 0.2) 65%, rgba(9, 13, 22, 0.88) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 48px 16px 20px;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .phone-screen > * {
+      pointer-events: auto;
+    }
+
+    .phone-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 5;
+    }
+
+    .trend-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .trend-pill span {
+      color: var(--amber);
+    }
+
+    .ai-tool-tag {
+      background: rgba(16, 185, 129, 0.25);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #a7f3d0;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    /* Center Play Button Overlay */
+    .video-center-play {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.9);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 30px rgba(16, 185, 129, 0.6);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      opacity: 0.95;
+      z-index: 10;
+    }
+
+    .video-center-play.playing {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .phone-mockup:hover .video-center-play.playing {
+      opacity: 0.85;
+      pointer-events: auto;
+    }
+
+    .video-center-play:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .video-center-play svg {
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+      margin-left: 3px;
+    }
+
+    /* Social Sidebar Icons */
+    .social-side-actions {
+      position: absolute;
+      right: 12px;
+      bottom: 95px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+      z-index: 5;
+    }
+
+    .social-action-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .social-icon-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-icon-circle svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+
+    .social-icon-circle.heart svg {
+      fill: #f43f5e;
+    }
+
+    /* Bottom Info & Subtitles inside phone */
+    .phone-bottom-info {
+      z-index: 5;
+    }
+
+    .creator-author {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .creator-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .creator-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .video-caption {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #e2e8f0;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    .sound-track {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+
+    .sound-track svg {
+      width: 12px;
+      height: 12px;
+      fill: var(--primary);
+    }
+
+    /* Floating badges surrounding phone */
+    .floating-card {
+      position: absolute;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 12px 18px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      z-index: 8;
+      animation: floatCard 6s ease-in-out infinite alternate;
+    }
+
+    .card-top-right {
+      top: 50px;
+      right: -30px;
+    }
+
+    .card-bottom-left {
+      bottom: 60px;
+      left: -35px;
+      animation-delay: -3s;
+    }
+
+    @keyframes floatCard {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-10px); }
+    }
+
+    .floating-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .floating-value {
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .floating-value .val-highlight {
+      color: var(--primary);
+    }
+
+    /* ==========================================================================
+       4. SECTION: "AI NÊN THAM GIA KHÓA HỌC NÀY?" (THỰC TẾ & GẦN GŨI)
+       ========================================================================== */
+    .section-padding {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 50px;
+    }
+
+    .section-subtitle-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+
+    .section-main-title {
+      font-size: clamp(28px, 3.2vw, 40px);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .audience-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 30px 24px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .audience-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-hover);
+      background: var(--bg-card-hover);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .audience-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .audience-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.35;
+    }
+
+    .audience-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       5. SECTION: QUY TRÌNH 4 BƯỚC THỰC CHIẾN (RÕ RÀNG, DỄ HIỂU)
+       ========================================================================== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      transition: all 0.3s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(6, 182, 212, 0.4);
+      background: var(--bg-card-hover);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    }
+
+    .step-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--secondary);
+      background: rgba(6, 182, 212, 0.12);
+      padding: 4px 10px;
+      border-radius: 6px;
+      width: fit-content;
+      margin-bottom: 18px;
+    }
+
+    .step-name {
+      font-size: 19px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.35;
+    }
+
+    .step-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .step-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .tool-tag {
+      font-size: 11px;
+      font-weight: 600;
+      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    /* ==========================================================================
+       6. SECTION: QUÀ TẶNG ĐẶC QUYỀN (BONUS VALUE SECTION)
+       ========================================================================== */
+    .bonus-section {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(9, 13, 22, 0.8) 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .bonus-card {
+      display: flex;
+      gap: 22px;
+      background: rgba(18, 26, 44, 0.6);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: all 0.3s ease;
+    }
+
+    .bonus-card:hover {
+      border-color: rgba(245, 158, 11, 0.4);
+      background: rgba(24, 34, 56, 0.8);
+      transform: translateY(-4px);
+    }
+
+    .bonus-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+
+    .bonus-info h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .bonus-value-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--amber);
+      background: rgba(245, 158, 11, 0.15);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .bonus-info p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       7. SECTION: GIẢNG VIÊN NGUYỄN ĐỨC (CHÂN THẬT, UY TÍN, GẦN GŨI)
+       ========================================================================== */
+    .instructor-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 48px;
+      align-items: center;
+      box-shadow: var(--shadow-card);
+    }
+
+    .instructor-media {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .instructor-avatar-wrap {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      padding: 8px;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.6), rgba(6, 182, 212, 0.2));
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .instructor-photo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #17233d url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&q=80') center/cover no-repeat;
+      border: 3px solid #090d16;
+    }
+
+    .instructor-name {
+      font-size: 24px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .instructor-role {
+      font-size: 14px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .instructor-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .ins-badge {
+      font-size: 11px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid var(--border);
+      color: #cbd5e1;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .instructor-letter {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .letter-quote-icon {
+      font-size: 36px;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .letter-p {
+      font-size: 15.5px;
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
+    .letter-p strong {
+      color: #fff;
+    }
+
+    .instructor-guarantee {
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 3px solid var(--primary);
+      padding: 14px 18px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 14px;
+      color: #d1fae5;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+
+    /* ==========================================================================
+       8. SECTION: FEEDBACK HỌC VIÊN (TESTIMONIALS THẬT)
+       ========================================================================== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s;
+    }
+
+    .testi-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .stars {
+      color: var(--amber);
+      font-size: 14px;
+      margin-bottom: 14px;
+      letter-spacing: 2px;
+    }
+
+    .testi-content {
+      font-size: 14.5px;
+      color: #cbd5e1;
+      line-height: 1.65;
+      margin-bottom: 22px;
+      font-style: italic;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .testi-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      border: 2px solid var(--primary);
+    }
+
+    .testi-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .testi-work {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       SECTION: MỘT QUY TRÌNH DỄ HÌNH DUNG (3 BƯỚC BẮT ĐẦU TỪ ĐÂY)
+       ========================================================================== */
+    .process-simple-section {
+      padding: 90px 0 60px;
+      position: relative;
+    }
+
+    .process-stepper-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 48px;
+    }
+
+    .stepper-item {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .stepper-num {
+      color: #ffffff;
+      font-weight: 700;
+      margin-right: 4px;
+    }
+
+    .process-header-wrap {
+      margin-bottom: 44px;
+    }
+
+    .process-tag {
+      display: inline-block;
+      color: #2dd4bf;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .process-title {
+      font-size: clamp(28px, 3.4vw, 42px);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    .process-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .process-card {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 34px 28px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .process-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(45, 212, 191, 0.35);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    .p-card-tag {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #2dd4bf;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 18px;
+    }
+
+    .p-card-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 14px 0;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    .p-card-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ==========================================================================
+       SECTION: XÂY VIDEO · XÂY THƯƠNG HIỆU (AI HỖ TRỢ SẢN XUẤT. BẠN GIỮ CHẤT RIÊNG)
+       ========================================================================== */
+    .branding-section {
+      padding: 60px 0 90px;
+      position: relative;
+    }
+
+    .branding-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .branding-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .branding-img-box {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+      background: #0d1527;
+    }
+
+    .branding-img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .branding-img-box:hover .branding-img {
+      transform: scale(1.02);
+    }
+
+    .branding-caption {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .branding-tag {
+      display: inline-block;
+      color: #2dd4bf;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .branding-title {
+      font-size: clamp(28px, 3.4vw, 42px);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px 0;
+    }
+
+    .branding-lead {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0 0 32px 0;
+    }
+
+    .branding-steps-list {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 32px;
+    }
+
+    .branding-step-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .branding-step-row:first-child {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .b-step-num {
+      color: #2dd4bf;
+      font-weight: 700;
+      font-size: 16px;
+      min-width: 24px;
+    }
+
+    .b-step-text {
+      font-size: 16px;
+      color: #f1f5f9;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .btn-mint-brand {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #2dd4bf;
+      color: #042f2e;
+      font-size: 15.5px;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 20px rgba(45, 212, 191, 0.25);
+    }
+
+    .btn-mint-brand:hover {
+      background: #5eead4;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(45, 212, 191, 0.4);
+    }
+
+    @media (max-width: 960px) {
+      .process-stepper-bar {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 36px;
+      }
+      .process-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .branding-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .process-simple-section {
+        padding: 60px 0 40px;
+      }
+      .branding-section {
+        padding: 40px 0 60px;
+      }
+    }
+
+    /* ==========================================================================
+       9. SECTION: EMBEDDED LEAD FORM TRÊN TRANG (TIỆN LỢI & DỄ ĐIỀN)
+       ========================================================================== */
+    .lead-section {
+      padding: 80px 0;
+    }
+
+    .lead-container {
+      max-width: 680px;
+      margin: 0 auto;
+      background: linear-gradient(145deg, rgba(20, 30, 52, 0.95), rgba(12, 18, 32, 0.98));
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: var(--radius-xl);
+      padding: 44px 40px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(16, 185, 129, 0.15);
+      text-align: center;
+    }
+
+    .lead-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--primary);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .lead-title {
+      font-size: clamp(24px, 2.6vw, 32px);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .lead-subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .site-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      text-align: left;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 14px 18px;
+      background: rgba(9, 13, 22, 0.8);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      color: #fff;
+      font-family: inherit;
+      font-size: 15px;
+      transition: all 0.2s;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .form-group input::placeholder {
+      color: var(--text-dim);
+    }
+
+    .btn-form-submit {
+      margin-top: 10px;
+      padding: 16px;
+      background: var(--primary-gradient);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(16, 185, 129, 0.5);
+    }
+
+    .form-privacy-note {
+      font-size: 12.5px;
+      color: var(--text-dim);
+      text-align: center;
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* ==========================================================================
+       10. SECTION: HỎI ĐÁP (FAQ ACCORDION)
+       ========================================================================== */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all 0.25s;
+    }
+
+    .faq-item.active {
+      border-color: rgba(16, 185, 129, 0.3);
+      background: var(--bg-card-hover);
+    }
+
+    .faq-q {
+      padding: 20px 24px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+    }
+
+    .faq-q svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--text-muted);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-q svg {
+      transform: rotate(180deg);
+      fill: var(--primary);
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 24px;
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .faq-item.active .faq-a {
+      padding-bottom: 20px;
+    }
+
+    /* ==========================================================================
+       11. FOOTER (CHỈNH CHU, ĐẦY ĐỦ THÔNG TIN)
+       ========================================================================== */
+    .site-footer {
+      background: #060911;
+      border-top: 1px solid var(--border);
+      padding: 40px 0 90px; /* Thêm padding bottom để không bị che bởi floating bar */
+      font-size: 13.5px;
+      color: var(--text-dim);
+      text-align: center;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    /* ==========================================================================
+       12. INSTANT WELCOME LEAD POPUP (THIẾT KẾ NHƯ THẺ QUÀ TẶNG THÂN THIỆN)
+       ========================================================================== */
+    .welcome-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 10, 18, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .welcome-modal-backdrop.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .welcome-modal-card {
+      position: relative;
+      max-width: 480px;
+      width: 100%;
+      background: linear-gradient(150deg, #131c31 0%, #0c1322 100%);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      border-radius: var(--radius-xl);
+      padding: 36px 30px 28px;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9), 0 0 50px rgba(16, 185, 129, 0.15);
+      transform: scale(0.94) translateY(15px);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .welcome-modal-backdrop.show .welcome-modal-card {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: all 0.2s;
+    }
+
+    .modal-close-btn:hover {
+      background: rgba(239, 68, 68, 0.25);
+      border-color: rgba(239, 68, 68, 0.5);
+      color: #ef4444;
+      transform: rotate(90deg);
+    }
+
+    .welcome-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: 999px;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+
+    .welcome-headline {
+      font-size: 24px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .welcome-headline .highlight {
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .welcome-sub {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+
+    .welcome-urgency {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+      font-size: 12.5px;
+      color: var(--amber);
+      margin-bottom: 20px;
+    }
+
+    /* Success Redirect Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(12px);
+      z-index: 3100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: #111a2e;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      border-radius: var(--radius-lg);
+      padding: 36px 30px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.15);
+      border: 2px solid var(--primary);
+      margin: 0 auto 16px;
+      display: grid;
+      place-items: center;
+    }
+
+    .modal-icon svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--primary);
+    }
+
+    .modal-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .modal-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .modal-countdown {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* Success Modal QR Box */
+    .success-qr-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 18px;
+      margin: 16px auto;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .success-qr-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 8px;
+      display: block;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .success-qr-sub {
+      font-size: 12.5px;
+      color: #94a3b8;
+      margin: 0;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .btn-success-zalo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: #2dd4bf;
+      color: #042f2e;
+      font-weight: 800;
+      font-size: 14.5px;
+      padding: 13px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 14px;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 18px rgba(45, 212, 191, 0.3);
+    }
+
+    .btn-success-zalo:hover {
+      background: #5eead4;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(45, 212, 191, 0.45);
+    }
+
+    /* Lead Section QR Card */
+    .lead-qr-divider {
+      position: relative;
+      margin: 28px 0 20px 0;
+      text-align: center;
+    }
+
+    .lead-qr-divider::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      z-index: 1;
+    }
+
+    .lead-qr-divider span {
+      position: relative;
+      z-index: 2;
+      background: #0f172a;
+      padding: 0 16px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #94a3b8;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .lead-qr-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 16px 20px;
+      text-align: left;
+      transition: border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .lead-qr-card:hover {
+      border-color: rgba(45, 212, 191, 0.3);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .lead-qr-wrapper {
+      flex-shrink: 0;
+      background: #ffffff;
+      padding: 6px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    .lead-qr-thumb {
+      width: 84px;
+      height: 84px;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .lead-qr-info {
+      flex: 1;
+    }
+
+    .lead-qr-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 4px 0;
+    }
+
+    .lead-qr-desc {
+      font-size: 13px;
+      color: #94a3b8;
+      margin: 0 0 8px 0;
+      line-height: 1.45;
+    }
+
+    .lead-qr-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #2dd4bf;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .lead-qr-link:hover {
+      color: #5eead4;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .lead-qr-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      .lead-qr-thumb {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    /* Floating Zalo QR Tooltip (Desktop) */
+    .floating-zalo-tooltip {
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+      width: 150px;
+    }
+
+    .floating-zalo:hover .floating-zalo-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .floating-zalo-tooltip img {
+      width: 120px;
+      height: 120px;
+      background: #fff;
+      padding: 6px;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .floating-zalo-tooltip span {
+      font-size: 11.5px;
+      color: #cbd5e1;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .floating-zalo-tooltip {
+        display: none !important;
+      }
+    }
+
+    /* ==========================================================================
+       13. FLOATING BOTTOM BAR & FLOATING ZALO WIDGET
+       ========================================================================== */
+    .floating-bar {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      z-index: 990;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 999px;
+      padding: 8px 10px 8px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(16, 185, 129, 0.2);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      max-width: 90%;
+    }
+
+    .floating-bar.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .bar-text {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .bar-btn {
+      padding: 10px 22px;
+      background: var(--primary-gradient);
+      color: #fff;
+      font-size: 13.5px;
+      font-weight: 800;
+      border-radius: 999px;
+      text-decoration: none;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .bar-btn:hover {
+      transform: scale(1.03);
+    }
+
+    /* Floating Zalo Button */
+    .floating-zalo {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 995;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #0068ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 25px rgba(0, 104, 255, 0.5);
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+
+    .floating-zalo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 30px rgba(0, 104, 255, 0.7);
+    }
+
+    .floating-zalo svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
+
+    .zalo-pulse {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid #0068ff;
+      animation: pulseZalo 2s infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes pulseZalo {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.4); opacity: 0; }
+    }
+
+    /* ==========================================================================
+       14. RESPONSIVE BREAKPOINTS (OPTIMIZED FOR MOBILE & DESKTOP)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+      }
+      .hero-content {
+        margin: 0 auto;
+      }
+      .hero-offer-badge, .hero-actions {
+        justify-content: center;
+      }
+      .hero-trust-list {
+        justify-content: center;
+      }
+      .audience-grid, .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .instructor-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 36px 24px;
+      }
+      .instructor-letter {
+        text-align: left;
+      }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .nav-cta-btn {
+        padding: 8px 14px;
+        font-size: 12.5px;
+        gap: 5px;
+      }
+      .hero-section {
+        padding: 30px 0 45px;
+      }
+      .hero-tag {
+        font-size: 11px;
+        padding: 5px 12px;
+      }
+      .hero-title {
+        font-size: clamp(26px, 7vw, 32px);
+        line-height: 1.25;
+      }
+      .audience-grid, .steps-grid, .bonus-grid {
+        grid-template-columns: 1fr;
+      }
+      .lead-container {
+        padding: 32px 20px;
+      }
+      .floating-bar {
+        padding: 8px 14px;
+        gap: 10px;
+        width: 95%;
+        bottom: 14px;
+      }
+      .bar-text {
+        font-size: 11.5px;
+      }
+      .bar-btn {
+        padding: 8px 14px;
+        font-size: 11.5px;
+      }
+      .floating-zalo {
+        bottom: 80px;
+        right: 18px;
+        width: 48px;
+        height: 48px;
+      }
+      .floating-zalo svg {
+        width: 24px;
+        height: 24px;
+      }
+      .floating-card {
+        display: none;
+      }
+      .phone-mockup {
+        width: 290px;
+        height: 520px;
+      }
+      .welcome-modal-card {
+        padding: 30px 20px 24px;
+        max-height: 92vh;
+        overflow-y: auto;
+      }
+      .welcome-headline {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- AMBIENT BACKGROUND GLOWS (Ấm áp, dịu mắt) -->
+  <div class="ambient-bg">
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-middle-right"></div>
+    <div class="ambient-glow glow-bottom-left"></div>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NAVIGATION -->
+  <header class="site-header" id="mainHeader">
+    <div class="wrap nav-inner">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <span class="brand-text">ducai<span class="brand-badge">.vn</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#quy-trinh">Quy trình</a></li>
+        <li><a href="#thuong-hieu">Thương hiệu</a></li>
+        <li><a href="#dang-ky">Đăng ký học</a></li>
+        <li><a href="#faq">Hỏi đáp</a></li>
+      </ul>
+
+      <button type="button" class="nav-cta-btn open-lead-btn">
+        <span>Vào Nhóm Zalo Học Ngay</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (THỰC TẾ, GẦN GŨI, TẠO ĐỘ TIN TƯỞNG CAO)
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="wrap hero-grid">
+        <!-- Cột trái: Nội dung thuyết phục -->
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="pulse-dot"></span>
+            <span>KHÓA HỌC THỰC CHIẾN CÙNG NGUYỄN ĐỨC · 100% THỰC HÀNH</span>
+          </div>
+
+          <h1 class="hero-title">
+            Tự Tay Tạo Hàng Trăm<br>
+            <span class="highlight">Video Triệu View Bằng AI</span><br>
+            Chỉ Trong 15 Phút
+          </h1>
+
+          <p class="hero-sub">
+            Không cần biết kỹ thuật quay dựng. Không cần lộ mặt hay mua máy móc đắt tiền. 
+            Bạn chỉ cần 1 chiếc điện thoại hoặc laptop để tự động sản xuất video ngắn chuẩn xu hướng 
+            <strong>kéo hàng triệu lượt xem và doanh thu bán hàng tự động</strong>.
+          </p>
+
+          <div class="hero-offer-badge">
+            <span class="price-old">2.999.000đ</span>
+            <span class="price-free">HÔM NAY MIỄN PHÍ</span>
+            <span class="offer-remain">⚡ Chỉ còn 8 suất học bổng</span>
+          </div>
+
+          <div class="hero-actions">
+            <button type="button" class="btn-main-cta open-lead-btn">
+              <span>NHẬN KHÓA HỌC & VÀO NHÓM ZALO 🚀</span>
+            </button>
+            <a href="#quy-trinh" class="btn-secondary-link">
+              <span>Xem quy trình bắt đầu ↓</span>
+            </a>
+          </div>
+
+          <ul class="hero-trust-list">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Cầm tay chỉ việc 1-1</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Làm được ngay sau buổi 1</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Không cần biết đồ họa</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cột phải: Mô phỏng điện thoại video ngắn chân thực -->
+        <div class="phone-showcase-wrapper">
+          <!-- Card bay 1: Tăng trưởng follow -->
+          <div class="floating-card card-top-right">
+            <div class="floating-header">
+              <span>📈 KẾT QUẢ KÊNH MỚI</span>
+            </div>
+            <div class="floating-value">
+              <span class="val-highlight">+48.5K</span> Follower / 7 ngày
+            </div>
+          </div>
+
+          <!-- Card bay 2: Tốc độ dựng -->
+          <div class="floating-card card-bottom-left">
+            <div class="floating-header">
+              <span>⚡ TỐC ĐỘ SẢN XUẤT</span>
+            </div>
+            <div class="floating-value">
+              <span class="val-highlight">15 Phút</span> = 1 Video 4K
+            </div>
+          </div>
+
+          <!-- Khung điện thoại thông minh -->
+          <div class="phone-mockup" id="phoneMockup">
+            <div class="phone-island">
+              <div class="island-lens"></div>
+            </div>
+
+            <!-- Video AI phát trực tiếp trong khung điện thoại -->
+            <video class="phone-video-media" id="heroAiVideo" autoplay loop muted playsinline>
+              <source src="assets/ai-video.mp4" type="video/mp4">
+              <source src="assets/ai-video.webm" type="video/webm">
+            </video>
+            <div class="phone-video-overlay"></div>
+
+            <div class="phone-screen">
+              <div class="phone-top-bar">
+                <div class="trend-pill">
+                  <span>🔥</span> Xu hướng #1
+                </div>
+                <div class="ai-tool-tag">4K AI Video</div>
+              </div>
+
+              <!-- Nút Play/Pause giữa video -->
+              <div class="video-center-play playing" id="videoPlayToggle" title="Bấm để tạm dừng hoặc phát tiếp">
+                <svg viewBox="0 0 24 24" id="playIconSvg" width="24" height="24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+
+              <!-- Nút tương tác bên phải -->
+              <div class="social-side-actions">
+                <div class="social-action-btn">
+                  <div class="social-icon-circle heart">
+                    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                  </div>
+                  <span>184.5K</span>
+                </div>
+
+                <div class="social-action-btn">
+                  <div class="social-icon-circle">
+                    <svg viewBox="0 0 24 24"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                  </div>
+                  <span>3,420</span>
+                </div>
+
+                <div class="social-action-btn">
+                  <div class="social-icon-circle">
+                    <svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"/></svg>
+                  </div>
+                  <span>45.8K</span>
+                </div>
+              </div>
+
+              <!-- Thông tin người sáng tạo & phụ đề -->
+              <div class="phone-bottom-info">
+                <div class="creator-author">
+                  <div class="creator-avatar">Đ</div>
+                  <span class="creator-name">@ducai.vn · Đã xác minh</span>
+                </div>
+                <div class="video-caption">
+                  3 Bí quyết ứng dụng AI tạo kịch bản giật gân, lồng tiếng cảm xúc & dựng video tự động...
+                </div>
+                <div class="sound-track">
+                  <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                  <span>Âm thanh thịnh hành - Giọng đọc AI tự nhiên</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: MỘT QUY TRÌNH DỄ HÌNH DUNG (3 BƯỚC BẮT ĐẦU TỪ ĐÂY)
+         ========================================================================== -->
+    <section class="process-simple-section" id="quy-trinh">
+      <div class="wrap">
+        <!-- Horizontal Step Timeline -->
+        <div class="process-stepper-bar">
+          <div class="stepper-item"><span class="stepper-num">01</span> / Từ ý tưởng đến kịch bản</div>
+          <div class="stepper-item"><span class="stepper-num">02</span> / Từ kịch bản đến video</div>
+          <div class="stepper-item"><span class="stepper-num">03</span> / Từ video đến kênh cá nhân</div>
+        </div>
+
+        <div class="process-header-wrap">
+          <span class="process-tag">MỘT QUY TRÌNH DỄ HÌNH DUNG</span>
+          <h2 class="process-title">Bạn muốn làm video.<br>Hãy bắt đầu từ đây.</h2>
+        </div>
+
+        <div class="process-cards-grid">
+          <!-- Card 1 -->
+          <div class="process-card">
+            <div class="p-card-tag">01 / Ý TƯỞNG</div>
+            <h3 class="p-card-title">Biết mình sẽ nói gì</h3>
+            <p class="p-card-desc">Xác định chủ đề gắn với chuyên môn, người xem và cá tính của bạn. Dùng AI để phát triển ý tưởng nội dung.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="process-card">
+            <div class="p-card-tag">02 / KỊCH BẢN</div>
+            <h3 class="p-card-title">Viết để người xem hiểu</h3>
+            <p class="p-card-desc">Chuyển ý tưởng thành mở đầu, nội dung chính và lời kêu gọi hành động. Chỉnh lại để giữ giọng nói riêng.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="process-card">
+            <div class="p-card-tag">03 / VIDEO</div>
+            <h3 class="p-card-title">Đưa câu chuyện lên hình</h3>
+            <p class="p-card-desc">Kết hợp hình ảnh, lời thoại và phụ đề thành video. Tạo cách trình bày nhất quán cho kênh cá nhân.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: XÂY VIDEO · XÂY THƯƠNG HIỆU (AI HỖ TRỢ SẢN XUẤT. BẠN GIỮ CHẤT RIÊNG)
+         ========================================================================== -->
+    <section class="branding-section" id="thuong-hieu">
+      <div class="wrap">
+        <div class="branding-grid">
+          <!-- Cột trái: Hình ảnh AI Nguyễn Đức trong studio sản xuất video -->
+          <div class="branding-visual">
+            <div class="branding-img-box">
+              <img src="assets/nguyen-duc-studio.jpg" alt="Ảnh AI minh họa Nguyễn Đức trong không gian sản xuất video" class="branding-img" loading="lazy">
+            </div>
+            <p class="branding-caption">Hình minh họa không gian sáng tạo video, tạo bằng AI từ ảnh tham chiếu.</p>
+          </div>
+
+          <!-- Cột phải: Nội dung & Danh sách các bước -->
+          <div class="branding-content">
+            <span class="branding-tag">XÂY VIDEO · XÂY THƯƠNG HIỆU</span>
+            <h2 class="branding-title">AI hỗ trợ sản xuất.<br>Bạn giữ chất riêng.</h2>
+            <p class="branding-lead">Mục tiêu là giúp bạn hình dung và thực hành quy trình làm video phục vụ thương hiệu cá nhân.</p>
+
+            <div class="branding-steps-list">
+              <div class="branding-step-row">
+                <span class="b-step-num">01</span>
+                <span class="b-step-text">Chọn chủ đề phù hợp với thế mạnh của bạn.</span>
+              </div>
+              <div class="branding-step-row">
+                <span class="b-step-num">02</span>
+                <span class="b-step-text">Phát triển ý tưởng và viết kịch bản với AI.</span>
+              </div>
+              <div class="branding-step-row">
+                <span class="b-step-num">03</span>
+                <span class="b-step-text">Chuẩn bị hình ảnh, lời thoại và phụ đề.</span>
+              </div>
+              <div class="branding-step-row">
+                <span class="b-step-num">04</span>
+                <span class="b-step-text">Hoàn thiện video, lên kế hoạch đăng kênh.</span>
+              </div>
+            </div>
+
+            <div class="branding-actions">
+              <button type="button" class="btn-mint-brand open-lead-btn">
+                <span>Nhận khóa học hôm nay →</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: FORM ĐĂNG KÝ TRÊN TRANG (EMBEDDED LEAD CAPTURE FORM)
+         ========================================================================== -->
+    <section class="lead-section" id="dang-ky">
+      <div class="wrap">
+        <div class="lead-container">
+          <div class="lead-badge">
+            <span>🎁 VÉ MỜI ĐẶC QUYỀN HÔM NAY</span>
+          </div>
+          <h2 class="lead-title">Đăng Ký Nhận Khóa Học & Vào Nhóm Zalo</h2>
+          <p class="lead-subtitle">
+            Điền thông tin để nhận tài liệu học tập qua Email và được tự động thêm vào <strong>Nhóm Zalo hỗ trợ thực hành 1-1</strong> cùng anh Đức.
+          </p>
+
+          <form class="site-form" id="leadForm">
+            <div class="form-group">
+              <label for="userName">Họ và tên của bạn *</label>
+              <input type="text" id="userName" name="name" required placeholder="Ví dụ: Nguyễn Văn A">
+            </div>
+
+            <div class="form-group">
+              <label for="userPhone">Số điện thoại / Zalo *</label>
+              <input type="tel" id="userPhone" name="phone" required placeholder="Ví dụ: 0988 888 888">
+            </div>
+
+            <div class="form-group">
+              <label for="userEmail">Địa chỉ Email nhận tài liệu *</label>
+              <input type="email" id="userEmail" name="email" required placeholder="Ví dụ: name@gmail.com">
+            </div>
+
+            <button type="submit" class="btn-form-submit" id="submitBtn">
+              <span>VÀO NHÓM ZALO HỌC NGAY 🚀</span>
+            </button>
+          </form>
+
+          <div class="form-privacy-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            <span>Cam kết bảo mật 100% · Tự động hiện mã QR & chuyển hướng vào Nhóm Zalo sau khi gửi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: HỎI ĐÁP THƯỜNG GẶP (FAQ)
+         ========================================================================== -->
+    <section class="section-padding" id="faq">
+      <div class="wrap">
+        <div class="section-header">
+          <span class="section-subtitle-tag">GIẢI ĐÁP THẮC MẮC</span>
+          <h2 class="section-main-title">Câu Hỏi Thường Gặp</h2>
+          <p class="section-desc">Mọi điều bạn cần biết trước khi bước chân vào khóa học thực chiến.</p>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <div class="faq-q">
+              <span>Tôi không rành công nghệ, máy tính có học được không?</span>
+              <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            </div>
+            <div class="faq-a">
+              Hoàn toàn được! Khóa học được thiết kế dành riêng cho người mới bắt đầu từ số 0. Tất cả thao tác đều là kéo - thả hoặc copy câu lệnh có sẵn. Chỉ cần bạn biết dùng điện thoại thông minh hoặc laptop cơ bản là làm được.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <div class="faq-q">
+              <span>Có cần phải mua các tài khoản AI đắt tiền không?</span>
+              <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            </div>
+            <div class="faq-a">
+              Không bắt buộc! Anh Đức sẽ hướng dẫn bạn tận dụng tối đa các công cụ AI miễn phí hoặc gói dùng thử tốt nhất để tạo ra sản phẩm chất lượng cao mà không tốn chi phí.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <div class="faq-q">
+              <span>Tôi ngại xuất hiện trước máy quay thì có làm kênh được không?</span>
+              <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            </div>
+            <div class="faq-a">
+              Đây chính là thế mạnh lớn nhất của AI! Bạn hoàn toàn có thể tạo ra các nhân vật hoạt hình, người ảo 3D hoặc sử dụng hình ảnh minh họa điện ảnh kèm giọng đọc AI tự nhiên để xây kênh mà không cần để lộ một giây nào khuôn mặt của mình.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <div class="faq-q">
+              <span>Sau khi gửi thông tin tôi sẽ nhận được gì?</span>
+              <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            </div>
+            <div class="faq-a">
+              Hệ thống sẽ lập tức chuyển hướng bạn vào Nhóm Zalo VIP của anh Đức. Tại đây bạn sẽ nhận được đường link vào lớp học, bộ 500+ Prompt độc quyền và được hỗ trợ trực tiếp từ anh Đức cùng đội ngũ trợ giảng.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="brand-text" style="font-size: 18px;">ducai<span class="brand-badge">.vn</span></div>
+      <p>© 2026 ducai.vn · Bản quyền thuộc về chuyên gia Nguyễn Đức. Mọi quyền được bảo lưu.</p>
+      <ul class="footer-links">
+        <li><a href="#quy-trinh">Quy trình</a></li>
+        <li><a href="#thuong-hieu">Thương hiệu</a></li>
+        <li><a href="#dang-ky">Đăng ký</a></li>
+        <li><a href="#faq">Hỏi đáp</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       STICKY FLOATING BAR AT BOTTOM
+       ========================================================================== -->
+  <div class="floating-bar" id="floatingBar">
+    <div class="bar-text">
+      🔥 <strong>Suất học bổng hôm nay:</strong> Miễn phí 100% (còn 8 suất)
+    </div>
+    <button type="button" class="bar-btn open-lead-btn">
+      Vào Nhóm Zalo Ngay 🚀
+    </button>
+  </div>
+
+  <!-- FLOATING ZALO BUTTON -->
+  <a href="https://zalo.me/g/kaf6kdwdrnpi8k2g8zn0" target="_blank" rel="noopener" class="floating-zalo" id="floatingZalo" aria-label="Nhắn tin Zalo hỗ trợ">
+    <div class="zalo-pulse"></div>
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.5 5.43 3.84 7.04L5 22l4.13-1.38C10.05 20.84 11 21 12 21c5.52 0 10-4.03 10-9s-4.48-10-10-10zm1 14.5h-2v-2h2v2zm1.07-7.75l-.9.92C12.45 10.42 12 10.87 12 12h-2c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+    </svg>
+  </a>
+
+  <!-- ==========================================================================
+       INSTANT WELCOME LEAD POPUP MODAL (BẬT LÊN NGAY KHI VÀO TRANG)
+       ========================================================================== -->
+  <div class="welcome-modal-backdrop" id="welcomeModal">
+    <div class="welcome-modal-card">
+      <button type="button" class="modal-close-btn" id="closeWelcomeModal" aria-label="Đóng popup">&times;</button>
+      
+      <div class="welcome-badge">
+        <span class="pulse-dot"></span>
+        <span>ƯU ĐÃI ĐẶC QUYỀN HÔM NAY · 100% MIỄN PHÍ</span>
+      </div>
+
+      <h2 class="welcome-headline">Nhận Khóa Học Làm Video<br><span class="highlight">Triệu View Bằng AI</span></h2>
+      
+      <p class="welcome-sub">
+        Điền thông tin để nhận tài liệu bài học và được tự động thêm vào <strong>Nhóm Zalo hỗ trợ thực hành 1-1</strong> cùng anh Đức.
+      </p>
+
+      <div class="welcome-urgency">
+        <span>⚡</span>
+        <span>Chỉ còn <strong>8 suất học bổng</strong> cuối cùng trong ngày!</span>
+      </div>
+
+      <form class="site-form" id="welcomeLeadForm">
+        <div class="form-group">
+          <label for="popupName">Họ và tên của bạn *</label>
+          <input type="text" id="popupName" name="name" required placeholder="Ví dụ: Nguyễn Văn A">
+        </div>
+
+        <div class="form-group">
+          <label for="popupPhone">Số điện thoại / Zalo *</label>
+          <input type="tel" id="popupPhone" name="phone" required placeholder="Ví dụ: 0988 888 888">
+        </div>
+
+        <div class="form-group">
+          <label for="popupEmail">Địa chỉ Email nhận tài liệu *</label>
+          <input type="email" id="popupEmail" name="email" required placeholder="Ví dụ: yourname@gmail.com">
+        </div>
+
+        <button type="submit" class="btn-form-submit" id="popupSubmitBtn">
+          <span>VÀO NHÓM ZALO HỌC NGAY 🚀</span>
+        </button>
+      </form>
+
+      <div class="form-privacy-note">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <span>Bảo mật 100% · Tự động mở Zalo ngay sau khi gửi</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL POPUP SUCCESS REDIRECT -->
+  <div class="modal-backdrop" id="successModal">
+    <div class="modal-content" style="max-width: 440px; position: relative;">
+      <button type="button" class="modal-close-btn" id="closeSuccessModal" aria-label="Đóng popup">&times;</button>
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+      </div>
+      <h3 class="modal-title">🎉 ĐĂNG KÝ THÀNH CÔNG!</h3>
+      <p class="modal-desc" id="successModalDesc">
+        Thông tin của bạn đã được ghi nhận. Hãy quét mã QR bên dưới bằng Zalo hoặc nhấn nút để vào <strong>Nhóm Hỗ Trợ Thực Hành 1-1</strong> cùng anh Đức ngay:
+      </p>
+
+      <div class="success-qr-box">
+        <img src="assets/qr-zalo.png" alt="Mã QR Nhóm Zalo Nguyễn Đức" class="success-qr-img">
+        <p class="success-qr-sub">📱 Mở Zalo trên điện thoại quét mã này để vào nhóm</p>
+      </div>
+
+      <a href="https://zalo.me/g/kaf6kdwdrnpi8k2g8zn0" target="_blank" rel="noopener" class="btn-success-zalo" id="successZaloLink">
+        <span>BẤM VÀO NHÓM ZALO NGAY 🚀</span>
+      </a>
+
+      <div class="modal-countdown" id="modalCountdown">Đang tự động chuyển hướng trong 5 giây...</div>
+    </div>
+  </div>
+
+  <!-- CENTRAL JAVASCRIPT LOGIC -->
+  <script src="config.js"></script>
+  <script>
+    (function() {
+      // 1. Reading Progress & Header Scroll
+      const progressBar = document.getElementById('scrollProgress');
+      const header = document.getElementById('mainHeader');
+      const floatingBar = document.getElementById('floatingBar');
+
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (scrollTop / docHeight) * 100;
+        if (progressBar) progressBar.style.width = progress + '%';
+
+        if (header) {
+          if (scrollTop > 40) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        }
+
+        if (floatingBar) {
+          if (scrollTop > 350) {
+            floatingBar.classList.add('show');
+          } else {
+            floatingBar.classList.remove('show');
+          }
+        }
+      });
+
+      // 2. FAQ Accordion Toggle
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const q = item.querySelector('.faq-q');
+        q.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach(i => {
+            i.classList.remove('active');
+            const a = i.querySelector('.faq-a');
+            if (a) a.style.maxHeight = null;
+          });
+          if (!isActive) {
+            item.classList.add('active');
+            const a = item.querySelector('.faq-a');
+            if (a) a.style.maxHeight = a.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // 3. Welcome Lead Popup Logic
+      const welcomeModal = document.getElementById('welcomeModal');
+      const closeWelcomeBtn = document.getElementById('closeWelcomeModal');
+      const welcomeForm = document.getElementById('welcomeLeadForm');
+      const popupSubmitBtn = document.getElementById('popupSubmitBtn');
+
+      function openWelcomeModal() {
+        if (welcomeModal) {
+          welcomeModal.classList.add('show');
+          const nameInput = document.getElementById('popupName');
+          if (nameInput) setTimeout(() => nameInput.focus(), 300);
+        }
+      }
+
+      function closeWelcomeModal() {
+        if (welcomeModal) welcomeModal.classList.remove('show');
+      }
+
+      // Tự động bật lên sau 800ms (bỏ qua nếu URL có ?nomodal để tiện chụp ảnh/kiểm tra)
+      if (!window.location.search.includes('nomodal')) {
+        setTimeout(openWelcomeModal, 800);
+      }
+
+      if (closeWelcomeBtn) closeWelcomeBtn.addEventListener('click', closeWelcomeModal);
+
+      if (welcomeModal) {
+        welcomeModal.addEventListener('click', (e) => {
+          if (e.target === welcomeModal) closeWelcomeModal();
+        });
+      }
+
+      // Mở modal khi bấm các nút CTA trên trang
+      document.querySelectorAll('.open-lead-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openWelcomeModal();
+        });
+      });
+
+      function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text || '';
+        return div.innerHTML;
+      }
+
+      // 4. Shared Form Submission Handler
+      function handleLeadSubmit(name, phone, email, submitBtnElement) {
+        if (submitBtnElement) {
+          submitBtnElement.disabled = true;
+          submitBtnElement.innerHTML = '<span>ĐANG KẾT NỐI ZALO...</span>';
+        }
+
+        try {
+          const leads = JSON.parse(localStorage.getItem('ducai_leads') || '[]');
+          leads.push({ name, phone, email, time: new Date().toISOString() });
+          localStorage.setItem('ducai_leads', JSON.stringify(leads));
+        } catch(err) {
+          console.warn('Storage error:', err);
+        }
+
+        closeWelcomeModal();
+
+        const zaloUrl = (window.CONFIG && window.CONFIG.zalo && window.CONFIG.zalo.redirectUrl) 
+          ? window.CONFIG.zalo.redirectUrl 
+          : 'https://zalo.me/g/kaf6kdwdrnpi8k2g8zn0';
+
+        const successModal = document.getElementById('successModal');
+        const modalCountdown = document.getElementById('modalCountdown');
+        const successZaloLink = document.getElementById('successZaloLink');
+        const successModalDesc = document.getElementById('successModalDesc');
+        const closeSuccessBtn = document.getElementById('closeSuccessModal');
+
+        if (successZaloLink) successZaloLink.href = zaloUrl;
+        if (successModalDesc && name) {
+          successModalDesc.innerHTML = `Chào <strong>${escapeHtml(name)}</strong>! Thông tin của bạn đã được ghi nhận. Hãy quét mã QR bên dưới bằng Zalo hoặc nhấn nút để vào <strong>Nhóm Hỗ Trợ Thực Hành 1-1</strong> cùng anh Đức ngay:`;
+        }
+
+        let redirectTimer = null;
+        function closeSuccess() {
+          if (redirectTimer) clearInterval(redirectTimer);
+          if (successModal) successModal.classList.remove('active');
+        }
+
+        if (closeSuccessBtn) closeSuccessBtn.onclick = closeSuccess;
+        if (successModal) {
+          successModal.onclick = (e) => {
+            if (e.target === successModal) closeSuccess();
+          };
+        }
+
+        if (successModal) {
+          successModal.classList.add('active');
+          let count = 6;
+          modalCountdown.textContent = `Tự động chuyển hướng sau ${count} giây...`;
+
+          redirectTimer = setInterval(() => {
+            count--;
+            if (count <= 0) {
+              clearInterval(redirectTimer);
+              window.location.href = zaloUrl;
+            } else {
+              modalCountdown.textContent = `Tự động chuyển hướng sau ${count} giây...`;
+            }
+          }, 1000);
+        } else {
+          window.location.href = zaloUrl;
+        }
+      }
+
+      // Handle Popup Form Submit
+      if (welcomeForm) {
+        welcomeForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const name = document.getElementById('popupName').value.trim();
+          const phone = document.getElementById('popupPhone').value.trim();
+          const email = document.getElementById('popupEmail').value.trim();
+          if (!name || !phone || !email) return;
+          handleLeadSubmit(name, phone, email, popupSubmitBtn);
+        });
+      }
+
+      // Handle Embedded Form Submit
+      const leadForm = document.getElementById('leadForm');
+      const submitBtn = document.getElementById('submitBtn');
+      if (leadForm) {
+        leadForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const name = document.getElementById('userName').value.trim();
+          const phone = document.getElementById('userPhone').value.trim();
+          const email = document.getElementById('userEmail').value.trim();
+          if (!name || !phone || !email) return;
+          handleLeadSubmit(name, phone, email, submitBtn);
+        });
+      }
+
+      // Hook kiểm tra màn hình thành công & mã QR (chỉ kích hoạt khi thêm ?testsuccess trên URL)
+      if (window.location.search.includes('testsuccess')) {
+        setTimeout(() => {
+          handleLeadSubmit('Nguyễn Đức', '0988888888', 'contact@ducai.vn');
+        }, 100);
+      }
+
+      // 5. Phone AI Video Interaction & Play/Pause
+      const heroVideo = document.getElementById('heroAiVideo');
+      const videoPlayToggle = document.getElementById('videoPlayToggle');
+      const playIconSvg = document.getElementById('playIconSvg');
+
+      if (heroVideo) {
+        heroVideo.play().catch(() => {});
+
+        const togglePlay = (e) => {
+          if (e) e.stopPropagation();
+          if (heroVideo.paused) {
+            heroVideo.play();
+            if (videoPlayToggle) videoPlayToggle.classList.add('playing');
+            if (playIconSvg) playIconSvg.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+          } else {
+            heroVideo.pause();
+            if (videoPlayToggle) videoPlayToggle.classList.remove('playing');
+            if (playIconSvg) playIconSvg.innerHTML = '<path d="M8 5v14l11-7z"/>';
+          }
+        };
+
+        if (videoPlayToggle) videoPlayToggle.addEventListener('click', togglePlay);
+        heroVideo.addEventListener('click', togglePlay);
+      }
+
+      // Đồng bộ link Zalo từ CONFIG cho floating zalo button
+      const floatingZalo = document.getElementById('floatingZalo');
+      if (floatingZalo && window.CONFIG && window.CONFIG.zalo && window.CONFIG.zalo.redirectUrl) {
+        floatingZalo.href = window.CONFIG.zalo.redirectUrl;
+      }
+
+    })();
+  </script>
+</body>
+</html>

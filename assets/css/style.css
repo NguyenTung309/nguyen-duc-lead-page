@@ -1,0 +1,262 @@
+/* ==============================================================================
+   DUCAI.VN - PRESTIGE APPLE & RUNWAY AI EDITORIAL STYLESHEET
+   Phong cách đẳng cấp quốc tế: Tối giản, sang trọng, sắc nét, hoàn toàn không đồ chơi
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --bg-core: #06070a;
+  --bg-card: rgba(13, 16, 26, 0.75);
+  --bg-card-hover: rgba(18, 23, 38, 0.9);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(56, 189, 248, 0.5);
+
+  --accent-cyan: #38bdf8;
+  --accent-blue: #2563eb;
+  --accent-emerald: #10b981;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--bg-core);
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-core);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Subtle Ambient Lighting (Êm ái, chiều sâu điện ảnh) */
+.ambient-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 85% 60%, rgba(37, 99, 235, 0.04) 0%, transparent 50%);
+}
+
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+.font-mono { font-family: var(--font-mono); }
+
+/* Thẻ Kính Frosted Glass Đẳng Cấp */
+.luxury-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.9), 0 0 30px rgba(56, 189, 248, 0.08);
+  transform: translateY(-3px);
+}
+
+/* Form Input Sắc Nét */
+.luxury-input {
+  background: rgba(8, 10, 18, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  font-family: var(--font-body);
+  transition: all 0.2s ease;
+}
+
+.luxury-input:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+  background: rgba(10, 13, 24, 0.98);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.luxury-input::placeholder {
+  color: #64748b;
+}
+
+/* Nút Bấm Chuyển Đổi Cao (Apple-Grade CTA Button) */
+.btn-prestige-cta {
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow: 0 10px 30px -5px rgba(14, 165, 233, 0.45);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-prestige-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px -5px rgba(14, 165, 233, 0.65);
+  filter: brightness(1.08);
+}
+
+.btn-prestige-cta:active {
+  transform: translateY(1px);
+}
+
+/* Mockup iPhone 16 Pro Titanium Thực Tế */
+.phone-mockup-frame {
+  position: relative;
+  width: 310px;
+  height: 620px;
+  background: #000000;
+  border-radius: 48px;
+  border: 5px solid #2a2c35;
+  box-shadow: 
+    0 30px 80px -15px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(255, 255, 255, 0.15),
+    inset 0 0 0 2px #18191f;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.phone-island {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95px;
+  height: 25px;
+  background: #000000;
+  border-radius: 20px;
+  z-index: 30;
+}
+
+.phone-screen-content {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #000000;
+}
+
+/* Đĩa than xoay trong TikTok */
+@keyframes spinVinyl {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.vinyl-disk {
+  animation: spinVinyl 5s linear infinite;
+}
+
+/* Dải Marquee Chuyên Nghiệp */
+.marquee-prestige {
+  overflow: hidden;
+  padding: 22px 0;
+  background: rgba(9, 11, 19, 0.7);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeLoop 28s linear infinite;
+  gap: 2rem;
+}
+
+@keyframes marqueeLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #cbd5e1;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
+}
+
+/* Gradient Text Tinh Tế */
+.text-prestige-gradient {
+  background: linear-gradient(135deg, #ffffff 30%, #38bdf8 75%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scroll Reveal */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sticky Mobile Bar */
+.sticky-mobile-bar {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(6, 7, 12, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.9);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #06070a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* FAQ Accordion */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.faq-item.active .faq-content {
+  max-height: 400px;
+}
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: #38bdf8;
+}
